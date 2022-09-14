@@ -2,9 +2,6 @@ package com.gildedrose;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import sun.jvm.hotspot.utilities.Assert;
-
-import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class GildedRoseTest {
 
@@ -111,5 +108,33 @@ class GildedRoseTest {
 
         Assertions.assertTrue(item.sellIn == 10, "Due date of Sulfuras never changes");
     }
+
+    @Test
+    public void sulfurasDueDateQualityShouldNotChange() {
+        Item item = new Item("Sulfuras, Hand of Ragnaros", -1, 80);
+        GildedRose gildedRose = new GildedRose(new Item[] {item});
+        gildedRose.updateQuality();
+
+        Assertions.assertTrue(item.quality == 80, "Due date of Sulfuras never changes");
+    }
+
+    @Test
+    public void backStagePassesQualityNotIncreasesTwiceWhenDueDateIsOverOrEqualsEleven(){
+        Item item = new Item("Backstage passes to a TAFKAL80ETC concert", 11, 10);
+        GildedRose gildedRose = new GildedRose(new Item[] {item});
+        gildedRose.updateQuality();
+
+        Assertions.assertTrue(item.quality == 11, "Quality has to be 0 after due date");
+    }
+
+    @Test
+    public void backStagePassesQualityNotIncreasesTwiceWhenQualityIsOverOrEqualsFifty(){
+        Item item = new Item("Backstage passes to a TAFKAL80ETC concert", 5, 49);
+        GildedRose gildedRose = new GildedRose(new Item[] {item});
+        gildedRose.updateQuality();
+
+        Assertions.assertTrue(item.quality == 50, "Quality can't be increased when quality is 50");
+    }
+
 
 }
