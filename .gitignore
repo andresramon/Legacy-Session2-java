@@ -10,4 +10,5 @@ bin/
 # Gradle
 .gradle
 /build/
+src/**/*.received.txt
 
