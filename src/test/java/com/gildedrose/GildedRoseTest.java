@@ -136,5 +136,16 @@ class GildedRoseTest {
         Assertions.assertTrue(item.quality == 50, "Quality can't be increased when quality is 50");
     }
 
+    @Test
+    public void agedBrieQualityIncreasesOnlyOnceIfNotOverDueDate() {
+        Item item = new Item("Aged Brie", 10, 10);
+        GildedRose gildedRose = new GildedRose(new Item[] {item});
+        gildedRose.updateQuality();
+
+        Assertions.assertTrue(item.quality == 11);
+
+
+    }
+
 
 }
