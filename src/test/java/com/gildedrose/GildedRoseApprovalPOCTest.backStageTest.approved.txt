@@ -1,0 +1,7 @@
+Items[0] = Backstage passes to a TAFKAL80ETC concert, 0, 5
+Items[1] = Backstage passes to a TAFKAL80ETC concert, -2, 0
+Items[2] = Backstage passes to a TAFKAL80ETC concert, 10, 11
+Items[3] = Backstage passes to a TAFKAL80ETC concert, 4, 50
+Items[4] = Backstage passes to a TAFKAL80ETC concert, 10, 11
+Items[5] = Backstage passes to a TAFKAL80ETC concert, 9, 80
+Items[6] = Backstage passes to a TAFKAL80ETC concert, -1, 0

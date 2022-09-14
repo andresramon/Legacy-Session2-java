@@ -1,0 +1,7 @@
+Items[0] = Any name, 0, 0
+Items[1] = Any name, -2, 0
+Items[2] = Any name, -2, 0
+Items[3] = Any name, 0, 0
+Items[4] = Any name, 10, 9
+Items[5] = Any name, 9, 79
+Items[6] = Any name, -1, 78
